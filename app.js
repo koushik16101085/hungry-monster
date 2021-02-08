@@ -13,15 +13,15 @@ recipeCloseBtn.addEventListener('click', () => {
 
 
 // get meal list 
-function getMealList(){
+function getMealList() {
     let searchInputTxt = document.getElementById('search-input').value.trim();
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`)
-    .then(response => response.json())
-    .then(data => {
-        let html = "";
-        if(data.meals){
-            data.meals.forEach((meal,key) => {
-                html += `
+        .then(response => response.json())
+        .then(data => {
+            let html = "";
+            if (data.meals) {
+                data.meals.forEach((meal, key) => {
+                    html += `
                     <div class = "meal-item" onclick="{details('${meal.idMeal}')}" data-id = "${meal.idMeal}">
                         <div class = "meal-img">
                             <img src = "${meal.strMealThumb}" alt = "food">
@@ -31,27 +31,27 @@ function getMealList(){
                         </div>
                     </div>
                 `;
-            });
-            mealList.classList.remove('notFound');
-        } else{
-            html = "Sorry, we didn't find any meal!";
-            mealList.classList.add('notFound');
-        }
+                });
+                mealList.classList.remove('notFound');
+            } else {
+                html = "Sorry, we didn't find any meal!";
+                mealList.classList.add('notFound');
+            }
 
-        mealList.innerHTML = html;
-    });
+            mealList.innerHTML = html;
+        });
 
 }
-function details(id){
+function details(id) {
     let html = "";
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-    .then(response => response.json())
-    .then(data => {
-    
-        if(data.meals){
-            let meal = data.meals[0];
-            //console.log(meal);
-        html = `
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.meals) {
+                let meal = data.meals[0];
+                //console.log(meal);
+                html = `
         <div  class = "meal-item" style="width:500px;","hight:500px;">
             <div class = "meal-img">
                 <img width="10px" height="500px" src = "${meal.strMealThumb}" alt = "food">
@@ -66,21 +66,21 @@ function details(id){
             </div>
         </div>
     `;
-        } else{
+            } else {
 
-        }
+            }
 
-        detail.innerHTML = html;
-    });
+            detail.innerHTML = html;
+        });
 }
 
 // get recipe of the meal
-function getMealRecipe(e){
+function getMealRecipe(e) {
     e.preventDefault();
-    if(e.target.classList.contains('recipe-btn')){
+    if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-        .then(response => response.json())
-        .then(data => mealRecipeModal(data.meals));
+            .then(response => response.json())
+            .then(data => mealRecipeModal(data.meals));
     }
 }
