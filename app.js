@@ -57,12 +57,12 @@ function details(id) {
                 <img width="10px" height="500px" src = "${meal.strMealThumb}" alt = "food">
             </div>
             <div class = "meal-name1">
-                <h3 class="mealNameColor" ><strong>1:Meal Name:</strong> ${meal.strMeal}</h3>
-                <h3><strong>2:strCategory:</strong> ${meal.strCategory}</h3>
-                <h3><strong>3:strInstructions:</strong>${meal.strInstructions}</h3>
-                <h3><strong>4:strTags:</strong>${meal.strTags}</h3>
-                <h3><strong>4:strIngredient1:</strong>${meal.strIngredient1}</h3>
-                <h3><strong>5:strIngredient2:</strong>${meal.strIngredient2}</h3>
+                <p class="mealNameColor" ><strong>1:Meal Name:</strong> ${meal.strMeal}</p>
+                <p><strong>2:strCategory:</strong> ${meal.strCategory}</p>
+                <p><strong>3:strInstructions:</strong>${meal.strInstructions}</p>
+                <p><strong>4:strTags:</strong>${meal.strTags}</p>
+                <p><strong>4:strIngredient1:</strong>${meal.strIngredient1}</p>
+                <p><strong>5:strIngredient2:</strong>${meal.strIngredient2}</p>
             </div>
         </div>
     `;
