@@ -57,12 +57,15 @@ function details(id) {
                 <img width="10px" height="500px" src = "${meal.strMealThumb}" alt = "food">
             </div>
             <div class = "meal-name1">
-                <p class="mealNameColor" ><strong>1:Meal Name:</strong> ${meal.strMeal}</p>
-                <p><strong>2:strCategory:</strong> ${meal.strCategory}</p>
-                <p><strong>3:strInstructions:</strong>${meal.strInstructions}</p>
-                <p><strong>4:strTags:</strong>${meal.strTags}</p>
-                <p><strong>4:strIngredient1:</strong>${meal.strIngredient1}</p>
-                <p><strong>5:strIngredient2:</strong>${meal.strIngredient2}</p>
+                <p class="mealNameColor" ><strong>Meal Name:</strong> ${meal.strMeal}</p>
+                <h3> Ingredient </h3>
+                <p><strong>1:</strong> ${meal.strMeasure1}  ${meal.strIngredient1}</p>
+                <p><strong>2:</strong>${meal.strMeasure2}  ${meal.strIngredient2}</p>
+                <p><strong>3:</strong>${meal.strMeasure3}  ${meal.strIngredient3}</p>
+                <p><strong>4:</strong>${meal.strMeasure4}  ${meal.strIngredient4}</p>
+                <p><strong>5:</strong>${meal.strMeasure5}  ${meal.strIngredient5}</p>
+                <p><strong>6:</strong>${meal.strMeasure6}  ${meal.strIngredient6}</p>
+                <p><strong>7:</strong>${meal.strMeasure7}  ${meal.strIngredient7}</p>
             </div>
         </div>
     `;
