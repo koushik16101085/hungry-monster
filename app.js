@@ -56,8 +56,8 @@ function details(id) {
             <div class = "meal-img">
                 <img width="10px" height="500px" src = "${meal.strMealThumb}" alt = "food">
             </div>
-            <div class = "meal-name1">
-                <p class="mealNameColor" ><strong>Meal Name:</strong> ${meal.strMeal}</p>
+            <div  class = "meal-name1">
+                <h2 class="mealNameColor" ><strong></strong> ${meal.strMeal}</h2>
                 <h3> Ingredient </h3>
                 <p><strong>1:</strong> ${meal.strMeasure1}  ${meal.strIngredient1}</p>
                 <p><strong>2:</strong>${meal.strMeasure2}  ${meal.strIngredient2}</p>
